@@ -10,7 +10,7 @@ class SplashScreenController extends GetxController {
 
   void _navigateToNext() {
     Timer(const Duration(seconds: 3), () {
-      Get.offAllNamed('/loginScreen');
+      Get.offAllNamed('/onboardingScreenOne');
     });
   }
 }
