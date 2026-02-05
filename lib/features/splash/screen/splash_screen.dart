@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:galaxybooking/core/common/constants/app_colors.dart';
 import 'package:galaxybooking/core/common/constants/image_path.dart';
+import 'package:galaxybooking/features/splash/controller/splash_screen_controller.dart';
+import 'package:get/get.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Get.put(SplashScreenController());
     return Scaffold(
       backgroundColor: AppColors.primaryBackground,
       body: Center(
