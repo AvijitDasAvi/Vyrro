@@ -4,19 +4,13 @@ import 'package:get/get.dart';
 
 class CustomButton extends StatelessWidget {
   final String title;
-  final String navigation;
-  const CustomButton({
-    super.key,
-    required this.title,
-    required this.navigation,
-  });
+  final VoidCallback onTap;
+  const CustomButton({super.key, required this.title, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Get.offAllNamed(navigation);
-      },
+      onTap: onTap,
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
         width: Get.width,
