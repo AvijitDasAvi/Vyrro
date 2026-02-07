@@ -3,6 +3,8 @@ import 'package:galaxybooking/core/common/constants/app_colors.dart';
 import 'package:galaxybooking/core/common/constants/image_path.dart';
 import 'package:galaxybooking/core/common/widgets/custom_button.dart';
 import 'package:galaxybooking/core/style/get_text_style.dart';
+import 'package:get/route_manager.dart';
+import 'package:get/utils.dart';
 
 class OnboardingScreenOne extends StatelessWidget {
   const OnboardingScreenOne({super.key});
@@ -60,7 +62,9 @@ class OnboardingScreenOne extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: CustomButton(
                 title: 'Get Started',
-                navigation: '/onboardingScreenTwo',
+                onTap: () {
+                  Get.offAllNamed('/onboardingScreenTwo');
+                },
               ),
             ),
           ],
