@@ -47,6 +47,7 @@ class OnboardingScreenThree extends StatelessWidget {
                   GestureDetector(
                     onTap: () {
                       controller.selectedRole.value = 0;
+                      Get.offAllNamed('/loginScreen');
                     },
                     child: RoleWidget(
                       icon: IconPath.userLogo,
@@ -65,6 +66,7 @@ class OnboardingScreenThree extends StatelessWidget {
                   GestureDetector(
                     onTap: () {
                       controller.selectedRole.value = 1;
+                      Get.offAllNamed('/loginScreen');
                     },
                     child: RoleWidget(
                       icon: IconPath.subtractLogo,
