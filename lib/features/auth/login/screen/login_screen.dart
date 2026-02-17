@@ -45,7 +45,7 @@ class LoginScreen extends StatelessWidget {
             ),
             SizedBox(height: 24),
             CustomTextFormField(
-              label: 'Password *',
+              label: 'Password',
               isRequired: true,
               hintText: 'Enter your password',
               suffixIcon: Icon(Icons.visibility),
