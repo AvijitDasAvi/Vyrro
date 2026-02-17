@@ -4,6 +4,7 @@ import 'package:galaxybooking/core/common/constants/app_colors.dart';
 import 'package:galaxybooking/core/common/widgets/custom_button.dart';
 import 'package:galaxybooking/core/common/widgets/custom_text_form_field.dart';
 import 'package:galaxybooking/core/style/get_text_style.dart';
+import 'package:galaxybooking/features/success/screen/success_screen.dart';
 import 'package:get/get.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -66,7 +67,18 @@ class RegisterScreen extends StatelessWidget {
               obscureText: true,
             ),
             SizedBox(height: 32),
-            CustomButton(title: 'Register', onTap: () {}),
+            CustomButton(
+              title: 'Register',
+              onTap: () {
+                Get.offAll(
+                  SuccessScreen(
+                    hintText:
+                        'Your account has been created successfully. Let’s get started.',
+                    buttonTitle: 'Go to Home',
+                  ),
+                );
+              },
+            ),
             SizedBox(height: 32),
             Center(
               child: RichText(
