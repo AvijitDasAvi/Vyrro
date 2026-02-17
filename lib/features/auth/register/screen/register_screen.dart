@@ -58,6 +58,7 @@ class RegisterScreen extends StatelessWidget {
               isRequired: true,
               hintText: 'Enter your password',
               obscureText: true,
+              suffixIcon: Icon(Icons.visibility),
             ),
             SizedBox(height: 24),
             CustomTextFormField(
@@ -65,6 +66,7 @@ class RegisterScreen extends StatelessWidget {
               isRequired: true,
               hintText: 'Enter your confirm password',
               obscureText: true,
+              suffixIcon: Icon(Icons.visibility),
             ),
             SizedBox(height: 32),
             CustomButton(
