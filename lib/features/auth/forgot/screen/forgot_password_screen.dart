@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:galaxybooking/features/auth/forgot/controller/forgot_controller.dart';
+import 'package:galaxybooking/features/auth/otp/screen/otp_screen.dart';
 import 'package:get/get.dart';
 import 'package:galaxybooking/core/common/constants/app_colors.dart';
 import 'package:galaxybooking/core/common/widgets/custom_button.dart';
@@ -145,8 +146,7 @@ class ForgotPasswordScreen extends StatelessWidget {
             CustomButton(
               title: 'Send Code',
               onTap: () {
-                // TODO: implement send logic
-                // You can check controller.isEmailSelected.value here
+                Get.to(OtpScreen());
               },
             ),
           ],
