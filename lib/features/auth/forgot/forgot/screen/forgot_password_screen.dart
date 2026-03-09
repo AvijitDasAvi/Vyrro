@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:galaxybooking/features/auth/forgot/controller/forgot_controller.dart';
-import 'package:galaxybooking/features/auth/otp/screen/otp_screen.dart';
+import 'package:galaxybooking/features/auth/forgot/forgot/controller/forgot_controller.dart';
+import 'package:galaxybooking/features/auth/forgot/otp/screen/otp_screen.dart';
 import 'package:get/get.dart';
 import 'package:galaxybooking/core/common/constants/app_colors.dart';
 import 'package:galaxybooking/core/common/widgets/custom_button.dart';
 import 'package:galaxybooking/core/common/widgets/custom_text_form_field.dart';
 import 'package:galaxybooking/core/style/get_text_style.dart';
 
-// Don't forget to initialize the controller
 class ForgotPasswordScreen extends StatelessWidget {
   ForgotPasswordScreen({super.key});
 
@@ -42,8 +41,6 @@ class ForgotPasswordScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-
-            // Tab selector with smooth color transition
             Obx(
               () => Container(
                 padding: const EdgeInsets.all(6),
@@ -54,7 +51,6 @@ class ForgotPasswordScreen extends StatelessWidget {
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    // Email tab
                     GestureDetector(
                       onTap: controller.selectEmail,
                       child: AnimatedContainer(
@@ -83,8 +79,6 @@ class ForgotPasswordScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 6),
-
-                    // Phone tab
                     GestureDetector(
                       onTap: controller.selectPhone,
                       child: AnimatedContainer(
@@ -118,8 +112,6 @@ class ForgotPasswordScreen extends StatelessWidget {
             ),
 
             const SizedBox(height: 48),
-
-            // Animated field label & hint change
             Obx(
               () => AnimatedSwitcher(
                 duration: const Duration(milliseconds: 350),
@@ -133,10 +125,6 @@ class ForgotPasswordScreen extends StatelessWidget {
                       ? 'Enter your email'
                       : 'Enter your phone number',
                   isRequired: true,
-                  // You can add keyboardType later:
-                  // keyboardType: controller.isEmailSelected.value
-                  //     ? TextInputType.emailAddress
-                  //     : TextInputType.phone,
                 ),
               ),
             ),
