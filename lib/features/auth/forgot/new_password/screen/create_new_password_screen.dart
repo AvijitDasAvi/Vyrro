@@ -3,6 +3,9 @@ import 'package:galaxybooking/core/common/constants/app_colors.dart';
 import 'package:galaxybooking/core/common/widgets/custom_button.dart';
 import 'package:galaxybooking/core/common/widgets/custom_text_form_field.dart';
 import 'package:galaxybooking/core/style/get_text_style.dart';
+import 'package:galaxybooking/features/success/screen/success_screen.dart';
+import 'package:galaxybooking/routes/app_routes.dart';
+import 'package:get/route_manager.dart';
 
 class CreateNewPasswordScreen extends StatelessWidget {
   const CreateNewPasswordScreen({super.key});
@@ -18,7 +21,9 @@ class CreateNewPasswordScreen extends StatelessWidget {
             Row(
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.toNamed(AppRoutes.getForgotPasswordScreen());
+                  },
                   icon: Icon(
                     Icons.arrow_back,
                     color: AppColors.textColor,
@@ -51,7 +56,18 @@ class CreateNewPasswordScreen extends StatelessWidget {
               hintText: 'Enter your password',
             ),
             Spacer(),
-            CustomButton(title: 'Save New Password', onTap: () {}),
+            CustomButton(
+              title: 'Save New Password',
+              onTap: () {
+                Get.offAll(
+                  SuccessScreen(
+                    hintText:
+                        'Your password has been changed. You can now sign in with your new password.',
+                    buttonTitle: 'Continue',
+                  ),
+                );
+              },
+            ),
           ],
         ),
       ),

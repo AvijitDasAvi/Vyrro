@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 
 class CustomButton extends StatelessWidget {
   final String title;
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
   const CustomButton({super.key, required this.title, required this.onTap});
 
   @override

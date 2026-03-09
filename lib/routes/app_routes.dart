@@ -61,7 +61,6 @@ class AppRoutes {
     ),
     GetPage(
       name: createNewPasswordScreen,
-      transition: Transition.rightToLeft,
       page: () => CreateNewPasswordScreen(),
     ),
   ];
