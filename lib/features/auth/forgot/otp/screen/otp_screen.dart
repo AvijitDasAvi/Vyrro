@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:galaxybooking/core/common/constants/app_colors.dart';
 import 'package:galaxybooking/core/common/widgets/custom_button.dart';
 import 'package:galaxybooking/core/style/get_text_style.dart';
+import 'package:galaxybooking/routes/app_routes.dart';
+import 'package:get/get.dart';
 
 class OtpScreen extends StatelessWidget {
   const OtpScreen({super.key});
@@ -107,7 +109,12 @@ class OtpScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 72),
-            CustomButton(title: 'Confirm Code', onTap: () {}),
+            CustomButton(
+              title: 'Confirm Code',
+              onTap: () {
+                Get.toNamed(AppRoutes.getCreateNewPasswordScreen());
+              },
+            ),
           ],
         ),
       ),

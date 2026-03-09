@@ -1,4 +1,5 @@
-import 'package:galaxybooking/features/auth/forgot/screen/forgot_password_screen.dart';
+import 'package:galaxybooking/features/auth/forgot/forgot/screen/forgot_password_screen.dart';
+import 'package:galaxybooking/features/auth/forgot/new_password/screen/create_new_password_screen.dart';
 import 'package:galaxybooking/features/auth/login/screen/login_screen.dart';
 import 'package:galaxybooking/features/auth/register/screen/register_screen.dart';
 import 'package:galaxybooking/features/onboarding/screen/onboarding_screen_one.dart';
@@ -15,6 +16,7 @@ class AppRoutes {
   static String loginScreen = '/loginScreen';
   static String forgotPasswordScreen = '/forgotPasswordScreen';
   static String registerScreen = '/registerScreen';
+  static String createNewPasswordScreen = '/createNewPasswordScreen';
 
   static String getSplashScreen() => splashScreen;
   static String getOnboardingScreenOne() => onboardingScreenOne;
@@ -23,6 +25,7 @@ class AppRoutes {
   static String getLoginScreen() => loginScreen;
   static String getForgotPasswordScreen() => forgotPasswordScreen;
   static String getRegisterScreen() => registerScreen;
+  static String getCreateNewPasswordScreen() => createNewPasswordScreen;
 
   static List<GetPage> routes = [
     GetPage(name: splashScreen, page: () => SplashScreen()),
@@ -55,6 +58,11 @@ class AppRoutes {
       name: registerScreen,
       transition: Transition.rightToLeft,
       page: () => RegisterScreen(),
+    ),
+    GetPage(
+      name: createNewPasswordScreen,
+      transition: Transition.rightToLeft,
+      page: () => CreateNewPasswordScreen(),
     ),
   ];
 }

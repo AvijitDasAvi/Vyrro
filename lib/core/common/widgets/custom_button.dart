@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:galaxybooking/core/common/constants/app_colors.dart';
+import 'package:galaxybooking/core/style/get_text_style.dart';
 import 'package:get/get.dart';
 
 class CustomButton extends StatelessWidget {
@@ -21,7 +22,7 @@ class CustomButton extends StatelessWidget {
         child: Center(
           child: Text(
             title,
-            style: TextStyle(
+            style: getTextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w600,
               color: Color(0xFF4C2E02),
